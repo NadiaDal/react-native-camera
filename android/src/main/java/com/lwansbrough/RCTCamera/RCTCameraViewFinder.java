@@ -184,7 +184,7 @@ class RCTCameraViewFinder extends TextureView implements TextureView.SurfaceText
 
                 //Set from coordinates
                 if (_focusFromCoordinates) {
-                    handleFocusOnCoordinates();
+                    handleFocusOnCoordinates(parameters);
                 }
 
                 // set picture size
