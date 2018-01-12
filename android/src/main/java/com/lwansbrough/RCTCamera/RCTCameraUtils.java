@@ -74,8 +74,6 @@ public class RCTCameraUtils {
         );
         Rect focusAreaRectRounded = new Rect();
         focusAreaRect.round(focusAreaRectRounded);
-        System.out.println("focusAreaRect");
-        System.out.println(focusAreaRect.round(focusAreaRectRounded));
         return new Camera.Area(focusAreaRectRounded, FOCUS_AREA_WEIGHT);
     }
 }

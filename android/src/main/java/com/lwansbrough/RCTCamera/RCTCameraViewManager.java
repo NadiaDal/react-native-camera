@@ -97,6 +97,16 @@ public class RCTCameraViewManager extends ViewGroupManager<RCTCameraView> {
         view.setY(y);
     }
 
+    @ReactProp(name = "focusWidth")
+    public void setFocusWidth(RCTCameraView view, int width) {
+        view.setX(width);
+    }
+
+    @ReactProp(name = "focusHeight")
+    public void setFocusHeight(RCTCameraView view, int height) {
+        view.setY(height);
+    }
+
     @ReactProp(name = "focusFromCoordinates")
     public void setFocusFromCoordinates(RCTCameraView view, boolean focusFromCoordinates) {
         view.setFocusFromCoordinates(focusFromCoordinates);

@@ -144,6 +144,14 @@ class RCTCameraViewFinder extends TextureView implements TextureView.SurfaceText
         this._coordY = y;
     }
 
+    public void setFocusWidth(int width) {
+        this._surfaceTextureWidth = width;
+    }
+
+    public void setFocusHeight(int height) {
+        this._surfaceTextureHeight = height;
+    }
+
     public void setFocusFromCoordinates(boolean focusFromCoordinates) {
         this._focusFromCoordinates = focusFromCoordinates;
     }

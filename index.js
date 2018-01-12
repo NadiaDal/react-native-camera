@@ -120,6 +120,8 @@ export default class Camera extends Component {
     focusFromCoordinates: PropTypes.bool,
     focusCenterX: PropTypes.number,
     focusCenterY: PropTypes.number,
+    focusWidth: PropTypes.number,
+    focusHeight: PropTypes.number,
   };
 
   static defaultProps = {
