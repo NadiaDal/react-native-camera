@@ -144,7 +144,7 @@ public class RCTCameraView extends ViewGroup {
     public void setFocusHeight(int height) {
         this._surfaceTextureHeight = height;
         if (this._viewFinder != null) {
-            this._viewFinder.setFocusHeight(heigh);
+            this._viewFinder.setFocusHeight(height);
         }
     }
     public void setFocusFromCoordinates(boolean focusFromCoordinates) {

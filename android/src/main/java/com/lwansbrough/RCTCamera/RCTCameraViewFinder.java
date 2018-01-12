@@ -486,7 +486,6 @@ class RCTCameraViewFinder extends TextureView implements TextureView.SurfaceText
 
             // Cancel any previous focus actions.
             _camera.cancelAutoFocus();
-            _camera.
 
             // Compute focus area rect.
             Camera.Area focusAreaFromMotionEvent;
