@@ -25,6 +25,8 @@ public class RCTCameraView extends ViewGroup {
     private int _flashMode = -1;
     private int _coordX = 0;
     private int _coordY = 0;
+    private int _surfaceTextureWidth;
+    private int _surfaceTextureHeight;
     private boolean _focusFromCoordinates = false;
 
     public RCTCameraView(Context context) {
@@ -129,6 +131,20 @@ public class RCTCameraView extends ViewGroup {
         this._coordY = y;
         if (this._viewFinder != null) {
             this._viewFinder.setY(y);
+        }
+    }
+
+    public void setFocusWidth(int width) {
+        this._surfaceTextureWidth = width;
+        if (this._viewFinder != null) {
+            this._viewFinder.setFocusWidth(width);
+        }
+    }
+
+    public void setFocusHeight(int height) {
+        this._surfaceTextureHeight = height;
+        if (this._viewFinder != null) {
+            this._viewFinder.setFocusHeight(heigh);
         }
     }
     public void setFocusFromCoordinates(boolean focusFromCoordinates) {

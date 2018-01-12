@@ -11,6 +11,7 @@ import android.hardware.Camera;
 import android.view.MotionEvent;
 import android.view.TextureView;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactContext;
@@ -170,6 +171,8 @@ class RCTCameraViewFinder extends TextureView implements TextureView.SurfaceText
                 } else if (focusModes.contains(Camera.Parameters.FOCUS_MODE_AUTO)) {
                     parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
                 }
+
+                Log.v("Camera","DRATUTI");
 
                 //Set from coordinates
                 if (_focusFromCoordinates) {
@@ -475,6 +478,7 @@ class RCTCameraViewFinder extends TextureView implements TextureView.SurfaceText
 
             // Cancel any previous focus actions.
             _camera.cancelAutoFocus();
+            _camera.
 
             // Compute focus area rect.
             Camera.Area focusAreaFromMotionEvent;
