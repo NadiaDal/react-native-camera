@@ -42,8 +42,8 @@ class RCTCameraViewFinder extends TextureView implements TextureView.SurfaceText
     private boolean _isStopping;
     private Camera _camera;
     private float mFingerSpacing;
-    private int _coordX = 0;
-    private int _coordY = 0;
+    private int _coordX = 77 + 206 / 2;
+    private int _coordY = 286 + 206 / 2;
     private boolean _focusFromCoordinates = false;
 
     // concurrency lock for barcode scanner to avoid flooding the runtime
