@@ -36,8 +36,8 @@ class RCTCameraViewFinder extends TextureView implements TextureView.SurfaceText
     private int _cameraType;
     private int _captureMode;
     private SurfaceTexture _surfaceTexture;
-    private int _surfaceTextureWidth;
-    private int _surfaceTextureHeight;
+    private int _surfaceTextureWidth = 200;
+    private int _surfaceTextureHeight = 200;
     private boolean _isStarting;
     private boolean _isStopping;
     private Camera _camera;
