@@ -44,7 +44,7 @@ class RCTCameraViewFinder extends TextureView implements TextureView.SurfaceText
     private float mFingerSpacing;
     private int _coordX = 77 + 206 / 2;
     private int _coordY = 286 + 206 / 2;
-    private boolean _focusFromCoordinates = false;
+    private boolean _focusFromCoordinates = true;
 
     // concurrency lock for barcode scanner to avoid flooding the runtime
     public static volatile boolean barcodeScannerTaskLock = false;
@@ -173,6 +173,10 @@ class RCTCameraViewFinder extends TextureView implements TextureView.SurfaceText
 
                 //Set from coordinates
                 if (_focusFromCoordinates) {
+
+                    // Cancel any previous focus actions.
+                    _camera.cancelAutoFocus();
+
                     // Compute focus area rect.
                     Camera.Area focusAreaFromCoordinates;
                     try {
